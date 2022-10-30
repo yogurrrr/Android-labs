@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lab2</string>
+    <string name="androidInfo">Android is an operating system for smartphones, tablets, e-books,
+        digital players, wristwatches, fitness bracelets, game consoles, laptops, netbooks, smartbooks,
+        Google Glass glasses, televisions, projectors and other devices
+        (in 2015, support for car entertainment systems and household robots appeared).</string>
+    <string name="button">Button</string>
+</resources>
