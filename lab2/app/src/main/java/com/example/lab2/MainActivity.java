@@ -1,5 +1,6 @@
 package com.example.lab2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Configuration;
@@ -14,13 +15,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onConfigurationChanged(Configuration newConfig) {
-        Configuration config = new Configuration();
-        if (newConfig.keyboardHidden == Configuration.KEYBOARDHIDDEN_NO) {
-            config.keyboardHidden = Configuration.KEYBOARDHIDDEN_NO;
-            Toast.makeText(getApplicationContext(), "The keyboard has changed state.", Toast.LENGTH_LONG).show();
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(this, "Landscape", Toast.LENGTH_SHORT).show();
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            Toast.makeText(this, "Portrait", Toast.LENGTH_SHORT).show();
         }
-        super.onConfigurationChanged(config);
+
     }
 
 }
