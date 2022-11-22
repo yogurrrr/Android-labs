@@ -5,4 +5,5 @@
         Google Glass glasses, televisions, projectors and other devices
         (in 2015, support for car entertainment systems and household robots appeared).</string>
     <string name="button">Button</string>
+    <string name="text_input">Text</string>
 </resources>
