@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Car Sales Database</string>
+    <string name="button_save_text">Save</string>
+    <string name="button_edit_text">Update</string>
+    <string name="button_go_to_cars">Go to \"Cars\" table</string>
+    <string name="button_go_to_sales">Go to \"Sales\" table</string>
+    <string name="button_go_to_managers">Go to \"Managers\" table</string>
+</resources>
