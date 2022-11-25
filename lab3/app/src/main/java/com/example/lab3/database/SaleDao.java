@@ -28,4 +28,13 @@ public interface SaleDao {
 
     @Query("SELECT * FROM Sale WHERE sale_id = :id")
     Sale loadSaleById(String id);
+
+    @Query("SELECT * FROM Sale WHERE sale_id = :id")
+    List<Sale> loadSalesBySaleId(String id);
+
+    @Query("SELECT * FROM Sale WHERE date = :date")
+    List<Sale> loadSalesByDate(String date);
+
+    @Query("SELECT * FROM Sale WHERE manager_id = :id ORDER BY manager_id ASC")
+    List<Sale> loadSalesByManagerId(String id);
 }

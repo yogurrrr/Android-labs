@@ -14,7 +14,6 @@ import com.example.lab3.database.AppDatabase;
 public class CarSelectActivity extends AppCompatActivity {
 
     AppDatabase mDb;
-//    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

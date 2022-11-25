@@ -7,8 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.widget.Button;
 
 import com.example.lab3.R;
+import com.example.lab3.activities.car.CarSelectActivity;
 import com.example.lab3.adapters.sale.SaleAdapter;
 import com.example.lab3.database.AppDatabase;
 import com.example.lab3.database.AppExecutors;
@@ -31,6 +33,9 @@ public class SaleMainActivity extends AppCompatActivity {
 
         floatingActionButton.setOnClickListener(v ->
                 startActivity(new Intent(SaleMainActivity.this, SaleEditActivity.class)));
+
+        Button buttonSelect = findViewById(R.id.button_go_to_sale_selects);
+        buttonSelect.setOnClickListener(view -> goToSaleSelects());
 
         mRecyclerView = findViewById(R.id.carMainRecyclerView);
 
@@ -65,6 +70,11 @@ public class SaleMainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         retrieveTasks();
+    }
+
+    private void goToSaleSelects() {
+        Intent intent = new Intent(this, SaleSelectActivity.class);
+        startActivity(intent);
     }
 
     private void retrieveTasks() {

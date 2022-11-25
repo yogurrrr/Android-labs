@@ -26,5 +26,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_go_to_manager_selects"
+        android:layout_width="257dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:layout_marginTop="288dp"
+        android:background="@drawable/border_back"
+        android:padding="20dp"
+        android:text="@string/button_go_to_selects"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/carMainRecyclerView"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="@+id/carMainRecyclerView"
+        app:layout_constraintTop_toTopOf="@+id/carMainRecyclerView"
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </android.support.constraint.ConstraintLayout>

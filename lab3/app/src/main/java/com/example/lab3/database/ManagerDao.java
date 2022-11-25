@@ -28,4 +28,13 @@ public interface ManagerDao {
 
     @Query("SELECT * FROM Manager WHERE manager_id = :id")
     Manager loadManagerById(String id);
+
+    @Query("SELECT * FROM Manager WHERE surname = :surname ORDER BY surname ASC")
+    List<Manager> loadManagersBySurname(String surname);
+
+    @Query("SELECT * FROM Manager WHERE manager_id = :id ORDER BY surname ASC")
+    List<Manager> loadManagersByManagerId(String id);
+
+    @Query("SELECT * FROM Manager WHERE email = :email ORDER BY surname ASC")
+    List<Manager> loadManagersByEmail(String email);
 }

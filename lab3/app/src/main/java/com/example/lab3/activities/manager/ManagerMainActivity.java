@@ -7,8 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.widget.Button;
 
 import com.example.lab3.R;
+import com.example.lab3.activities.car.CarSelectActivity;
 import com.example.lab3.adapters.manager.ManagerAdapter;
 import com.example.lab3.database.AppDatabase;
 import com.example.lab3.database.AppExecutors;
@@ -31,6 +33,9 @@ public class ManagerMainActivity extends AppCompatActivity {
 
         floatingActionButton.setOnClickListener(v ->
                 startActivity(new Intent(ManagerMainActivity.this, ManagerEditActivity.class)));
+
+        Button buttonSelect = findViewById(R.id.button_go_to_manager_selects);
+        buttonSelect.setOnClickListener(view -> goToManagerSelects());
 
         mRecyclerView = findViewById(R.id.carMainRecyclerView);
 
@@ -59,6 +64,11 @@ public class ManagerMainActivity extends AppCompatActivity {
             }
         }).attachToRecyclerView(mRecyclerView);
 
+    }
+
+    private void goToManagerSelects() {
+        Intent intent = new Intent(this, ManagerSelectActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.lab3.activities.car;
+package com.example.lab3.activities.sale;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,32 +8,34 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.lab3.R;
 import com.example.lab3.adapters.car.CarAdapter;
+import com.example.lab3.adapters.sale.SaleAdapter;
 import com.example.lab3.database.AppDatabase;
 import com.example.lab3.database.AppExecutors;
 import com.example.lab3.entities.Car;
+import com.example.lab3.entities.Sale;
 
 import java.util.List;
 
-public class CarSelectResultActivity extends AppCompatActivity {
+public class SaleSelectResultActivity extends AppCompatActivity {
 
     private Intent intent;
     private RecyclerView mRecyclerView;
-    private CarAdapter mAdapter;
+    private SaleAdapter mAdapter;
     private AppDatabase mDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_car_select_result);
+        setContentView(R.layout.activity_sale_select_result);
         mDb = AppDatabase.getInstance(getApplicationContext());
         intent = getIntent();
 
-        mRecyclerView = findViewById(R.id.carSelectRecyclerView);
+        mRecyclerView = findViewById(R.id.saleSelectRecyclerView);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize the adapter and attach it to the RecyclerView
-        mAdapter = new CarAdapter(this);
+        mAdapter = new SaleAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
     }
 
@@ -45,13 +47,17 @@ public class CarSelectResultActivity extends AppCompatActivity {
 
     private void retrieveTasks() {
         AppExecutors.getInstance().diskIO().execute(() -> {
-            if (intent.hasExtra("VIN number")) {
-                final List<Car> selectedCars = mDb.carDao().loadCarsByVin(intent.getStringExtra("VIN number"));
-                runOnUiThread(() -> mAdapter.setTasks(selectedCars));
+            if (intent.hasExtra("Date")) {
+                final List<Sale> selectedSales = mDb.saleDao().loadSalesByDate(intent.getStringExtra("Date"));
+                runOnUiThread(() -> mAdapter.setTasks(selectedSales));
             }
             else if (intent.hasExtra("Sale ID")) {
-                final List<Car> selectedCars = mDb.carDao().loadCarsBySaleId(intent.getStringExtra("Sale ID"));
-                runOnUiThread(() -> mAdapter.setTasks(selectedCars));
+                final List<Sale> selectedSales = mDb.saleDao().loadSalesBySaleId(intent.getStringExtra("Sale ID"));
+                runOnUiThread(() -> mAdapter.setTasks(selectedSales));
+            }
+            else if (intent.hasExtra("Manager ID")) {
+                final List<Sale> selectedSales = mDb.saleDao().loadSalesByManagerId(intent.getStringExtra("Manager ID"));
+                runOnUiThread(() -> mAdapter.setTasks(selectedSales));
             }
         });
 
