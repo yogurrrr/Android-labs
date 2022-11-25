@@ -7,4 +7,5 @@
     <string name="button_go_to_managers">Go to \"Managers\" table</string>
     <string name="button_go_to_selects">Selects</string>
     <string name="button_find">Find</string>
+    <string name="button_inner_join">Find all sales of one manager</string>
 </resources>

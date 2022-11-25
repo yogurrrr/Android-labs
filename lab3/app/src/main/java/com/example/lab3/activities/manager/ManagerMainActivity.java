@@ -37,6 +37,9 @@ public class ManagerMainActivity extends AppCompatActivity {
         Button buttonSelect = findViewById(R.id.button_go_to_manager_selects);
         buttonSelect.setOnClickListener(view -> goToManagerSelects());
 
+        Button buttonJoin = findViewById(R.id.button_go_to_manager_inner_join);
+        buttonJoin.setOnClickListener(view -> goToManagerJoin());
+
         mRecyclerView = findViewById(R.id.carMainRecyclerView);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -68,6 +71,11 @@ public class ManagerMainActivity extends AppCompatActivity {
 
     private void goToManagerSelects() {
         Intent intent = new Intent(this, ManagerSelectActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToManagerJoin() {
+        Intent intent = new Intent(this, ManagerJoinActivity.class);
         startActivity(intent);
     }
 

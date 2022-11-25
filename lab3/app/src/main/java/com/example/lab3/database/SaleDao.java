@@ -37,4 +37,5 @@ public interface SaleDao {
 
     @Query("SELECT * FROM Sale WHERE manager_id = :id ORDER BY manager_id ASC")
     List<Sale> loadSalesByManagerId(String id);
+
 }

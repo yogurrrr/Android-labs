@@ -8,8 +8,10 @@ import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
 import com.example.lab3.entities.Manager;
+import com.example.lab3.entities.Sale;
 
 import java.util.List;
+import java.util.Map;
 
 @Dao
 public interface ManagerDao {
@@ -37,4 +39,10 @@ public interface ManagerDao {
 
     @Query("SELECT * FROM Manager WHERE email = :email ORDER BY surname ASC")
     List<Manager> loadManagersByEmail(String email);
+
+    @Query("SELECT sale_id, sale.manager_id, cost, date, loan " +
+            "FROM Manager JOIN Sale ON manager.manager_id = sale.manager_id " +
+            "WHERE manager.manager_id = :id")
+    List<Sale> loadAllManagersAndSales(String id);
+
 }
