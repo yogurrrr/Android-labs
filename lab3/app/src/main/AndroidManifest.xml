@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".activities.sale.SaleMainActivity" />
         <activity android:name=".activities.sale.SaleEditActivity" />
+        <activity android:name=".activities.manager.ManagerMainActivity" />
+        <activity android:name=".activities.manager.ManagerEditActivity" />
         <activity android:name=".activities.car.CarEditActivity" />
         <activity android:name=".activities.car.CarMainActivity">
 

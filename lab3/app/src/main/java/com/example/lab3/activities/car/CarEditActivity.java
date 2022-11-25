@@ -61,11 +61,11 @@ public class CarEditActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        brand = findViewById(R.id.edit_sale_id);
-        model = findViewById(R.id.edit_manager_id);
-        saleId = findViewById(R.id.edit_cost);
-        vinNumber = findViewById(R.id.edit_date);
-        mileage = findViewById(R.id.edit_loan);
+        brand = findViewById(R.id.edit_manager_id);
+        model = findViewById(R.id.edit_manager_name);
+        saleId = findViewById(R.id.edit_manager_surname);
+        vinNumber = findViewById(R.id.edit_manager_phone);
+        mileage = findViewById(R.id.edit_manager_email);
         button = findViewById(R.id.button);
         button.setOnClickListener(v -> onSaveButtonClicked());
     }

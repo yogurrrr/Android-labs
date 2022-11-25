@@ -8,9 +8,10 @@ import android.content.Context;
 import android.util.Log;
 
 import com.example.lab3.entities.Car;
+import com.example.lab3.entities.Manager;
 import com.example.lab3.entities.Sale;
 
-@Database(entities = {Car.class, Sale.class}, version = 1, exportSchema = false)
+@Database(entities = {Car.class, Sale.class, Manager.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static final String LOG_TAG = AppDatabase.class.getSimpleName();
     private static final Object LOCK = new Object();
@@ -33,4 +34,6 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract CarDao carDao();
 
     public abstract SaleDao saleDao();
+
+    public abstract ManagerDao managerDao();
 }

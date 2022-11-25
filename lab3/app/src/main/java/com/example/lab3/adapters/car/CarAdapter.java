@@ -69,11 +69,11 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
         MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             mDb = AppDatabase.getInstance(context);
-            brand = itemView.findViewById(R.id.sale_id);
-            model = itemView.findViewById(R.id.sale_manager_id);
-            saleId = itemView.findViewById(R.id.sale_cost);
-            vinNumber = itemView.findViewById(R.id.sale_date);
-            mileage = itemView.findViewById(R.id.sale_loan);
+            brand = itemView.findViewById(R.id.manager_id);
+            model = itemView.findViewById(R.id.manager_name);
+            saleId = itemView.findViewById(R.id.manager_surname);
+            vinNumber = itemView.findViewById(R.id.manager_phone);
+            mileage = itemView.findViewById(R.id.manager_email);
             editImage = itemView.findViewById(R.id.edit_Image);
             editImage.setOnClickListener(v -> {
                 int elementId = mCarList.get(getAdapterPosition()).getCarId();

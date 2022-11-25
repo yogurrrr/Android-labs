@@ -18,7 +18,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/sale_id"
+                android:id="@+id/manager_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BMW"
@@ -27,25 +27,25 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/sale_manager_id"
+                android:id="@+id/manager_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="X5" />
 
             <TextView
-                android:id="@+id/sale_cost"
+                android:id="@+id/manager_surname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1-345" />
 
             <TextView
-                android:id="@+id/sale_date"
+                android:id="@+id/manager_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="VT135P658" />
 
             <TextView
-                android:id="@+id/sale_loan"
+                android:id="@+id/manager_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10 km" />

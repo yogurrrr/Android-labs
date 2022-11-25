@@ -57,7 +57,6 @@ public class SaleAdapter extends RecyclerView.Adapter<SaleAdapter.MyViewHolder> 
     }
 
     public List<Sale> getTasks() {
-
         return mSaleList;
     }
 
@@ -69,11 +68,11 @@ public class SaleAdapter extends RecyclerView.Adapter<SaleAdapter.MyViewHolder> 
         MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             mDb = AppDatabase.getInstance(context);
-            saleId = itemView.findViewById(R.id.sale_id);
-            managerId = itemView.findViewById(R.id.sale_manager_id);
-            cost = itemView.findViewById(R.id.sale_cost);
-            date = itemView.findViewById(R.id.sale_date);
-            loan = itemView.findViewById(R.id.sale_loan);
+            saleId = itemView.findViewById(R.id.manager_id);
+            managerId = itemView.findViewById(R.id.manager_name);
+            cost = itemView.findViewById(R.id.manager_surname);
+            date = itemView.findViewById(R.id.manager_phone);
+            loan = itemView.findViewById(R.id.manager_email);
             editImage = itemView.findViewById(R.id.edit_Image);
             editImage.setOnClickListener(v -> {
                 String elementId = mSaleList.get(getAdapterPosition()).getSaleId();

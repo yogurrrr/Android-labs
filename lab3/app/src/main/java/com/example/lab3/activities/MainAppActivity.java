@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.example.lab3.R;
 import com.example.lab3.activities.car.CarMainActivity;
+import com.example.lab3.activities.manager.ManagerMainActivity;
 import com.example.lab3.activities.sale.SaleMainActivity;
 
 public class MainAppActivity extends AppCompatActivity {
@@ -37,9 +38,7 @@ public class MainAppActivity extends AppCompatActivity {
     }
 
     public void goToManagers() {
-        Intent intent = new Intent(this, CarMainActivity.class);
-        //TODO
-        // поменять на ManagerMainActivity
+        Intent intent = new Intent(this, ManagerMainActivity.class);
         startActivity(intent);
     }
 }

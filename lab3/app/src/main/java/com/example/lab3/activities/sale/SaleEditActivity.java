@@ -61,11 +61,11 @@ public class SaleEditActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        saleId = findViewById(R.id.edit_sale_id);
-        managerId = findViewById(R.id.edit_manager_id);
-        cost = findViewById(R.id.edit_cost);
-        date = findViewById(R.id.edit_date);
-        loan = findViewById(R.id.edit_loan);
+        saleId = findViewById(R.id.edit_manager_id);
+        managerId = findViewById(R.id.edit_manager_name);
+        cost = findViewById(R.id.edit_manager_surname);
+        date = findViewById(R.id.edit_manager_phone);
+        loan = findViewById(R.id.edit_manager_email);
         button = findViewById(R.id.button);
         button.setOnClickListener(v -> onSaveButtonClicked());
     }

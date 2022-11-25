@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edit_sale_id"
+            android:id="@+id/edit_manager_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -23,7 +23,7 @@
             android:padding="20dp" />
 
         <EditText
-            android:id="@+id/edit_manager_id"
+            android:id="@+id/edit_manager_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -35,7 +35,7 @@
             android:padding="20dp" />
 
         <EditText
-            android:id="@+id/edit_cost"
+            android:id="@+id/edit_manager_surname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -47,7 +47,7 @@
             android:padding="20dp" />
 
         <EditText
-            android:id="@+id/edit_date"
+            android:id="@+id/edit_manager_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -59,7 +59,7 @@
             android:padding="20dp" />
 
         <EditText
-            android:id="@+id/edit_loan"
+            android:id="@+id/edit_manager_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
