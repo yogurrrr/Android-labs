@@ -24,7 +24,7 @@ public class CarEditActivity extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.car_activity_edit);
+        setContentView(R.layout.activity_car_edit);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -32,7 +32,6 @@ public class CarEditActivity extends AppCompatActivity {
         mDb = AppDatabase.getInstance(getApplicationContext());
         intent = getIntent();
         if (intent != null && intent.hasExtra(Constants.UPDATE_Car_Id)) {
-//            button.setText("Update");
             button.setText(R.string.button_edit_text);
 
             mCarId = intent.getIntExtra(Constants.UPDATE_Car_Id, -1);
@@ -66,7 +65,7 @@ public class CarEditActivity extends AppCompatActivity {
         saleId = findViewById(R.id.edit_manager_surname);
         vinNumber = findViewById(R.id.edit_manager_phone);
         mileage = findViewById(R.id.edit_manager_email);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.button_go_to_car_selects);
         button.setOnClickListener(v -> onSaveButtonClicked());
     }
 

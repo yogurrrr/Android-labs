@@ -28,4 +28,10 @@ public interface CarDao {
 
     @Query("SELECT * FROM Car WHERE car_id = :id")
     Car loadCarById(int id);
+
+    @Query("SELECT * FROM Car WHERE vin_number = :vin")
+    List<Car> loadCarsByVin(String vin);
+
+    @Query("SELECT * FROM Car WHERE sale_id = :sale_id")
+    List<Car> loadCarsBySaleId(String sale_id);
 }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.manager.ManagerEditActivity">
+    tools:context=".activities.car.CarEditActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/border"
-            android:hint="Manager ID"
+            android:hint="Brand"
             android:inputType="text"
             android:padding="20dp" />
 
@@ -30,8 +30,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/border"
-            android:hint="Name"
-            android:inputType="textPersonName"
+            android:hint="Model"
+            android:inputType="text"
             android:padding="20dp" />
 
         <EditText
@@ -42,8 +42,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/border"
-            android:hint="Surname"
-            android:inputType="textPersonName"
+            android:hint="Sale ID"
+            android:inputType="text"
             android:padding="20dp" />
 
         <EditText
@@ -54,8 +54,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/border"
-            android:hint="Phone"
-            android:inputType="phone"
+            android:hint="VIN number"
+            android:inputType="text"
             android:padding="20dp" />
 
         <EditText
@@ -66,12 +66,12 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/border"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress"
+            android:hint="Mileage"
+            android:inputType="text"
             android:padding="20dp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_go_to_car_selects"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

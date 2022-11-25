@@ -5,4 +5,6 @@
     <string name="button_go_to_cars">Go to \"Cars\" table</string>
     <string name="button_go_to_sales">Go to \"Sales\" table</string>
     <string name="button_go_to_managers">Go to \"Managers\" table</string>
+    <string name="button_go_to_selects">Selects</string>
+    <string name="button_find">Find</string>
 </resources>

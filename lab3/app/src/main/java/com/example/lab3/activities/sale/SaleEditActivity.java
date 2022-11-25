@@ -24,7 +24,7 @@ public class SaleEditActivity extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sale_activity_edit);
+        setContentView(R.layout.activity_sale_edit);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -66,7 +66,7 @@ public class SaleEditActivity extends AppCompatActivity {
         cost = findViewById(R.id.edit_manager_surname);
         date = findViewById(R.id.edit_manager_phone);
         loan = findViewById(R.id.edit_manager_email);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.button_go_to_car_selects);
         button.setOnClickListener(v -> onSaveButtonClicked());
     }
 

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.widget.Button;
 
 import com.example.lab3.R;
 import com.example.lab3.adapters.car.CarAdapter;
@@ -25,14 +26,17 @@ public class CarMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.car_activity_main);
+        setContentView(R.layout.activity_car_main);
 
         floatingActionButton = findViewById(R.id.addFAB);
 
         floatingActionButton.setOnClickListener(v ->
                 startActivity(new Intent(CarMainActivity.this, CarEditActivity.class)));
 
-        mRecyclerView = findViewById(R.id.recyclerView);
+        Button buttonSelect = findViewById(R.id.button_go_to_car_selects);
+        buttonSelect.setOnClickListener(view -> goToCarSelects());
+
+        mRecyclerView = findViewById(R.id.carMainRecyclerView);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -59,6 +63,11 @@ public class CarMainActivity extends AppCompatActivity {
             }
         }).attachToRecyclerView(mRecyclerView);
 
+    }
+
+    private void goToCarSelects() {
+        Intent intent = new Intent(this, CarSelectActivity.class);
+        startActivity(intent);
     }
 
     @Override

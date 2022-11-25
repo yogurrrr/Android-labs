@@ -25,14 +25,14 @@ public class ManagerMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manager_activity_main);
+        setContentView(R.layout.activity_manager_main);
 
         floatingActionButton = findViewById(R.id.addFAB);
 
         floatingActionButton.setOnClickListener(v ->
                 startActivity(new Intent(ManagerMainActivity.this, ManagerEditActivity.class)));
 
-        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.carMainRecyclerView);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

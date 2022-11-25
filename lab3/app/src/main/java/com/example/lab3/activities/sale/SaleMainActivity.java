@@ -25,14 +25,14 @@ public class SaleMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sale_activity_main);
+        setContentView(R.layout.activity_sale_main);
 
         floatingActionButton = findViewById(R.id.addFAB);
 
         floatingActionButton.setOnClickListener(v ->
                 startActivity(new Intent(SaleMainActivity.this, SaleEditActivity.class)));
 
-        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.carMainRecyclerView);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
